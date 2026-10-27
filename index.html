@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laser It! – Mirror Puzzle</title>
+<meta name="description" content="Laser It! – rotate mirrors, guide the laser and light up every target. A neon logic puzzle for Android.">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --pink: #ff3d9a; --cyan: #3df2ff; --yellow: #ffd166; --bg: #0b0f1a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; color: #fff; font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#0b0f1a, #1c0a2e 70%, #2a0838);
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding: 48px 16px 32px; overflow-x: hidden;
+  }
+  .grid {
+    position: fixed; left: 0; right: 0; bottom: 0; height: 34vh; z-index: -1;
+    background:
+      linear-gradient(transparent 0 96%, rgba(255,61,154,.35) 96%) 0 0 / 100% 40px,
+      linear-gradient(90deg, transparent 0 97%, rgba(255,61,154,.25) 97%) 0 0 / 60px 100%;
+    transform: perspective(300px) rotateX(55deg); transform-origin: bottom;
+  }
+  h1 {
+    font-family: 'Monoton', cursive; font-weight: 400; font-size: clamp(48px, 13vw, 110px);
+    margin: 0 0 8px; color: #fff6fb; letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--pink), 0 0 30px var(--pink), 0 0 60px rgba(255,61,154,.6);
+  }
+  .tag { color: var(--cyan); font-size: clamp(18px, 4.5vw, 26px); font-weight: 600; margin: 0 0 28px;
+    text-shadow: 0 0 12px rgba(61,242,255,.6); }
+  .icon { width: 132px; height: 132px; border-radius: 30px; box-shadow: 0 0 40px rgba(255,61,154,.45); margin-bottom: 28px; }
+  .play {
+    display: inline-block; padding: 18px 40px; border-radius: 40px; text-decoration: none;
+    background: var(--pink); color: #fff; font-weight: 800; font-size: 22px; letter-spacing: .5px;
+    box-shadow: 0 0 24px rgba(255,61,154,.7); transition: transform .15s;
+  }
+  .play:hover { transform: scale(1.05); }
+  .about { max-width: 560px; margin: 36px auto 0; line-height: 1.6; color: rgba(255,255,255,.85); font-size: 17px; }
+  .features { list-style: none; padding: 0; margin: 20px auto 0; max-width: 480px; text-align: left; }
+  .features li { padding: 8px 0 8px 34px; position: relative; color: rgba(255,255,255,.85); }
+  .features li::before { content: ""; position: absolute; left: 6px; top: 15px; width: 12px; height: 12px;
+    border-radius: 50%; border: 3px solid var(--yellow); box-shadow: 0 0 10px var(--yellow); }
+  footer { margin-top: auto; padding-top: 48px; font-size: 14px; color: rgba(255,255,255,.5); }
+  footer a { color: rgba(255,255,255,.75); }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <img class="icon" src="icon.png" alt="Laser It! icon">
+  <h1>Laser It!</h1>
+  <p class="tag">Mirrors. Lasers. Brain teasers.</p>
+  <a class="play" href="https://play.google.com/store/apps/details?id=com.bambaroogames.laserit">▶ Get it on Google Play</a>
+
+  <p class="about">Rotate the mirrors, guide the laser and light up every target!
+  A relaxing yet clever neon puzzle game – easy to learn, surprisingly hard to master.</p>
+  <ul class="features">
+    <li>Mines, portals, filters, two lasers and linked mirrors</li>
+    <li>Earn 3 stars by solving levels in the fewest moves</li>
+    <li>Helpers: Magnifier, X-ray and Lifebuoy</li>
+    <li>Unlock laser colors, boards, mirrors and target styles</li>
+    <li>Daily rewards and seasonal events</li>
+  </ul>
+
+  <footer>
+    © 2026 Malda555 ·
+    <a href="https://sites.google.com/view/laserit-privacy-policy">Privacy Policy / Polityka prywatności</a><br>
+    Contact: <a href="mailto:wishidoxmalda@gmail.com">wishidoxmalda@gmail.com</a>
+  </footer>
+</body>
+</html>
